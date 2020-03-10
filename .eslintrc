@@ -3,6 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "fp"],
   "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
     "prettier/prettier": ["error",{ "printWidth": 120 }],
     "promise/catch-or-return": "off",
     "react/style-prop-object": "error",
