@@ -9,6 +9,10 @@ interface SetWaterDrunkData extends Action {
   type: 'SET_WATER_DRUNK_DATA';
   payload: UserData;
 }
-type UserDataActions = SetWaterDrunkData;
+interface ResetWaterDrunkData extends Action {
+  type: 'RESET_WATER_DRUNK_DATA';
+}
 
-export type { UserData, UserDataActions, SetWaterDrunkData };
+type UserDataActions = SetWaterDrunkData | ResetWaterDrunkData;
+
+export type { UserData, UserDataActions, SetWaterDrunkData, ResetWaterDrunkData };

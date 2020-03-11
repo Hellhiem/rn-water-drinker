@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import { ThemeType } from "types/ThemeType";
 import { useTranslation } from "react-i18next";
 import { waterDrop } from "assets/images";
-import { Input } from "components";
+import { Input, Button } from "components";
 
 type PropType = {
   signIn: () => void;
@@ -35,18 +35,6 @@ const WaterDropImage = styled.Image.attrs({
   height: 80px;
 `;
 
-const SignInButton = styled.TouchableOpacity`
-  background-color: ${({ theme }: ThemeType) => theme.colors.mainAccent};
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  margin-top: 32px;
-  height: 40px;
-  width: 100%;
-`;
-
-const SignInText = styled.Text``;
-
 const LoginComponent = ({ signIn, onPasswordChange, onEmailChange }: PropType) => {
   const { t } = useTranslation();
 
@@ -58,9 +46,7 @@ const LoginComponent = ({ signIn, onPasswordChange, onEmailChange }: PropType) =
       </HeaderContainer>
       <Input labelText={t("Login.email")} onChange={onEmailChange} keyboardType="email-address" />
       <Input labelText={t("Login.password")} onChange={onPasswordChange} password />
-      <SignInButton onPress={signIn}>
-        <SignInText>Sign in</SignInText>
-      </SignInButton>
+      <Button text={t("Login.signIn")} onPress={signIn} />
     </Container>
   );
 };

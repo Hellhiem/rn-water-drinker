@@ -4,6 +4,7 @@ import { ThemeType } from "types/ThemeType";
 import styled from "styled-components/native";
 
 type PropType = {
+  value?: string;
   labelText: string;
   password?: boolean;
   keyboardType?: KeyboardType;
@@ -27,7 +28,7 @@ const InputTextField = styled.TextInput`
   padding-left: 3px;
 `;
 
-const Input = ({ labelText, onChange, password, keyboardType }: PropType) => {
+const Input = ({ value, labelText, onChange, password, keyboardType }: PropType) => {
   return (
     <InputContainer>
       <InputLabel>{labelText}</InputLabel>
@@ -36,6 +37,7 @@ const Input = ({ labelText, onChange, password, keyboardType }: PropType) => {
         secureTextEntry={password}
         keyboardType={keyboardType}
         autoCapitalize="none"
+        value={value}
       />
     </InputContainer>
   );

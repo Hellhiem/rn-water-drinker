@@ -1,9 +1,9 @@
 import { UserData, UserDataActions } from "types/UserData";
-import { SET_WATER_DRUNK_DATA } from "./constants";
+import { SET_WATER_DRUNK_DATA, RESET_WATER_DRUNK_DATA } from "./constants";
 
 const initialState: UserData = {
-  waterDrunk: 500,
-  date: "date"
+  waterDrunk: 0,
+  date: ""
 };
 
 function userData(state = initialState, action: UserDataActions): UserData {
@@ -13,6 +13,8 @@ function userData(state = initialState, action: UserDataActions): UserData {
         waterDrunk: action.payload.waterDrunk,
         date: action.payload.date
       };
+    case RESET_WATER_DRUNK_DATA:
+      return initialState;
     default:
       return state;
   }

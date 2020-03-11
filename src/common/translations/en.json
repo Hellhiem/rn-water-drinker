@@ -2,7 +2,14 @@
     "Login": {
         "title": "Water Drinker",
         "email": "Email",
-        "password": "Password"
+        "password": "Password",
+        "signIn": "Sign in"
+    },
+    "WaterStatistics": {
+        "youDrank": "You drank {{count}}ml of water today.",
+        "rememberToDrink": "Remember to drink 3500ml of water every day !",
+        "addWater": "Add water",
+        "enterWater": "Enter water in milliliters:"
     },
     "Alert": {
         "error": "Error",
