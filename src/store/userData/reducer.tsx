@@ -20,4 +20,4 @@ function userData(state = initialState, action: UserDataActions): UserData {
   }
 }
 
-export { userData };
+export { userData, initialState };
