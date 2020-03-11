@@ -2,7 +2,7 @@ import { Action } from "redux";
 
 type UserData = {
   waterDrunk: number;
-  date: string;
+  date: number;
 };
 
 interface SetWaterDrunkData extends Action {

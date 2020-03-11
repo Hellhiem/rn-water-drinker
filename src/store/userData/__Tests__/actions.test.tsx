@@ -8,10 +8,10 @@ const mockStore = configureMockStore();
 describe("Actions: userData", () => {
   describe("action: setWaterDrunkData", () => {
     const store = mockStore({ userData: initialState });
-    const expectedActions = [{ type: SET_WATER_DRUNK_DATA, payload: { waterDrunk: 20, date: "02/02/2020" } }];
+    const expectedActions = [{ type: SET_WATER_DRUNK_DATA, payload: { waterDrunk: 20, date: 123 } }];
 
     it("dispatches action to set water drunk data", () => {
-      store.dispatch(setWaterDrunkData({ waterDrunk: 20, date: "02/02/2020" }));
+      store.dispatch(setWaterDrunkData({ waterDrunk: 20, date: 123 }));
       expect(store.getActions()).toEqual(expectedActions);
     });
   });

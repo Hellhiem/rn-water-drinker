@@ -3,7 +3,7 @@ import { SET_WATER_DRUNK_DATA, RESET_WATER_DRUNK_DATA } from "./constants";
 
 const initialState: UserData = {
   waterDrunk: 0,
-  date: ""
+  date: 0
 };
 
 function userData(state = initialState, action: UserDataActions): UserData {

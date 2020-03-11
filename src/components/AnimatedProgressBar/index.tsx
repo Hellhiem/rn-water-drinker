@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useRef, useEffect, memo } from "react";
+import { Animated } from "react-native";
 import styled from "styled-components/native";
 import { ThemeType } from "types/ThemeType";
+
+type PropsType = {
+  value: number;
+};
 
 const Container = styled.View`
   flex-direction: row;
@@ -12,17 +17,32 @@ const Container = styled.View`
 `;
 
 const ProgressBar = styled.View`
-  width: 100%;
+  width: ${({ width }) => width}%;
   border-radius: 20px;
   background-color: ${({ theme }: ThemeType) => theme.colors.mainAccent};
 `;
 
-const AnimatedProgressBar = () => {
+const AnimatedProgressBar = memo(({ value }: PropsType) => {
+  const animation = useRef(new Animated.Value(value));
+
+  const width = animation.current.interpolate({
+    inputRange: [0, 100],
+    outputRange: ["0%", "100%"],
+    extrapolate: "clamp"
+  });
+
+  useEffect(() => {
+    Animated.timing(animation.current, {
+      toValue: value,
+      duration: 100
+    }).start();
+  }, [value]);
+
   return (
     <Container>
-      <ProgressBar />
+      <ProgressBar as={Animated.View} width={width} />
     </Container>
   );
-};
+});
 
 export default AnimatedProgressBar;

@@ -9,13 +9,13 @@ describe("Reducers: userData", () => {
         type: SET_WATER_DRUNK_DATA,
         payload: {
           waterDrunk: 200,
-          date: "05/02/2020"
+          date: 4563
         }
       };
 
       const expectedState = {
         waterDrunk: 200,
-        date: "05/02/2020"
+        date: 4563
       };
 
       expect(userData(initialState, action)).toEqual(expectedState);

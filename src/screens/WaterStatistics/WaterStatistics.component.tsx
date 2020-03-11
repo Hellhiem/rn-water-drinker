@@ -37,10 +37,12 @@ const WaterStatisticsComponent = ({ waterEntered, waterDrunk, enterWaterUnits, s
     enterWaterUnits("");
   };
 
+  const dailyWaterGoal = 3500;
+  const dailyProgress = (waterDrunk / dailyWaterGoal) * 100;
   return (
     <Container>
       <InfoText>{t("WaterStatistics.youDrank", { count: waterDrunk })}</InfoText>
-      <AnimatedProgressBar />
+      <AnimatedProgressBar value={dailyProgress} />
       <InfoText>{t("WaterStatistics.rememberToDrink")}</InfoText>
       <InputContainer>
         <Input
