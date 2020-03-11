@@ -1,4 +1,4 @@
-package com.waterdrinker;
+package com.pulpmil.waterdrinker;
 
 import com.facebook.react.ReactActivity;
 

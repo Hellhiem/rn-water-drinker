@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "998997081743",
+    "firebase_url": "https://waterdrinker-905f2.firebaseio.com",
+    "project_id": "waterdrinker-905f2",
+    "storage_bucket": "waterdrinker-905f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998997081743:android:bc197c423c940f8939bafa",
+        "android_client_info": {
+          "package_name": "com.pulpmil.waterdrinker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998997081743-29j1nebm13et87t0he8v81mt0sgr2gv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAi324A5kMN-MRYPtcRf3aYZeDyAZsprg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998997081743-29j1nebm13et87t0he8v81mt0sgr2gv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

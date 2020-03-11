@@ -3,5 +3,10 @@
         "title": "Water Drinker",
         "email": "Email",
         "password": "Password"
+    },
+    "Alert": {
+        "error": "Error",
+        "wrongPasswordOrEmail": "Provided email or password is not valid. Try again.",
+        "ok": "Ok"
     }
 }

@@ -36,6 +36,9 @@ target 'WaterDrinker' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+  pod 'Firebase/Auth', '~> 6.13.0'
+
   target 'WaterDrinkerTests' do
     inherit! :search_paths
     # Pods for testing

@@ -5,6 +5,10 @@ import { useTranslation } from "react-i18next";
 import { waterDrop } from "assets/images";
 import { Input } from "components";
 
+type PropType = {
+  signIn: (email: string, password: string) => void;
+};
+
 const Container = styled.View`
   flex: 1;
   margin-top: 36px;
@@ -41,7 +45,7 @@ const SignInButton = styled.TouchableOpacity`
 
 const SignInText = styled.Text``;
 
-const LoginComponent = () => {
+const LoginComponent = ({ signIn }: PropType) => {
   const { t } = useTranslation();
   const [emailText, onEmailChange] = useState("");
   const [passwordText, onPasswordChange] = useState("");
@@ -54,7 +58,7 @@ const LoginComponent = () => {
       </HeaderContainer>
       <Input labelText={t("Login.email")} onChange={onEmailChange} keyboardType="email-address" />
       <Input labelText={t("Login.password")} onChange={onPasswordChange} password />
-      <SignInButton>
+      <SignInButton onPress={() => signIn(emailText, passwordText)}>
         <SignInText>Sign in</SignInText>
       </SignInButton>
     </Container>

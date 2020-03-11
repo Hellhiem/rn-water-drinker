@@ -19,6 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* WaterDrinkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterDrinkerTests.m */; };
 		6EBEC4885EA9070C0A885B4D /* libPods-WaterDrinkerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C1CC8571C39F6715907D41 /* libPods-WaterDrinkerTests.a */; };
 		7D813678DE172E5DF39C5453 /* libPods-WaterDrinker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C771869E228FCEB98CAC4F /* libPods-WaterDrinker.a */; };
+		8481B3B12418D05700694AE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8481B3B02418D05700694AE7 /* GoogleService-Info.plist */; };
 		B55C52456517C700A739A083 /* libPods-WaterDrinker-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4CE5BBF3AEA0081541F203 /* libPods-WaterDrinker-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		53C771869E228FCEB98CAC4F /* libPods-WaterDrinker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterDrinker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65438324551D5F8E19CA5E9E /* Pods-WaterDrinker-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOSTests/Pods-WaterDrinker-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F65F3DA9D0C2343893255DF /* Pods-WaterDrinkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinkerTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinkerTests/Pods-WaterDrinkerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8481B3B02418D05700694AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4B0F5517E225B90CD0BC7C9 /* Pods-WaterDrinker-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOS/Pods-WaterDrinker-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CD4CE5BBF3AEA0081541F203 /* libPods-WaterDrinker-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterDrinker-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72F9F6053C261776E3E6D48 /* Pods-WaterDrinker-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOSTests/Pods-WaterDrinker-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8481B3B02418D05700694AE7 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* WaterDrinker */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* WaterDrinkerTests */,
@@ -194,7 +197,6 @@
 				7F65F3DA9D0C2343893255DF /* Pods-WaterDrinkerTests.debug.xcconfig */,
 				23845A3143BB9BFBA39D9603 /* Pods-WaterDrinkerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +310,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +341,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				8481B3B12418D05700694AE7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +639,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulpmil.waterdrinker;
 				PRODUCT_NAME = WaterDrinker;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -654,7 +658,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulpmil.waterdrinker;
 				PRODUCT_NAME = WaterDrinker;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
