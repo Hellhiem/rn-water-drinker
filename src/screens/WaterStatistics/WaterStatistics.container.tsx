@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setWaterDrunkData, resetWaterDrunkData } from "store/userData/actions";
 import { AppState } from "types/AppState";
@@ -15,10 +15,11 @@ const WaterStatisticsContainer = memo(() => {
     dispatch(setWaterDrunkData({ waterDrunk: waterDrunk + Number(waterEntered), date: Date.now() }));
   };
 
-  // I do not store archived data (for now ( ͡~ ͜ʖ ͡°))
-  if (!isToday(logsDate)) {
-    dispatch(resetWaterDrunkData());
-  }
+  useEffect(() => {
+    if (!isToday(logsDate)) {
+      dispatch(resetWaterDrunkData());
+    }
+  }, [logsDate]);
 
   return (
     <WaterStatisticsComponent

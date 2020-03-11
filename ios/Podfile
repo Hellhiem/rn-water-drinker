@@ -38,6 +38,7 @@ target 'WaterDrinker' do
 
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   pod 'Firebase/Auth', '~> 6.13.0'
+  pod 'Firebase/Messaging'
 
   target 'WaterDrinkerTests' do
     inherit! :search_paths

@@ -61,6 +61,7 @@
 		65438324551D5F8E19CA5E9E /* Pods-WaterDrinker-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOSTests/Pods-WaterDrinker-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F65F3DA9D0C2343893255DF /* Pods-WaterDrinkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinkerTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinkerTests/Pods-WaterDrinkerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8481B3B02418D05700694AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8481B3B2241904A000694AE7 /* WaterDrinker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WaterDrinker.entitlements; path = WaterDrinker/WaterDrinker.entitlements; sourceTree = "<group>"; };
 		A4B0F5517E225B90CD0BC7C9 /* Pods-WaterDrinker-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOS/Pods-WaterDrinker-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CD4CE5BBF3AEA0081541F203 /* libPods-WaterDrinker-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterDrinker-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72F9F6053C261776E3E6D48 /* Pods-WaterDrinker-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDrinker-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDrinker-tvOSTests/Pods-WaterDrinker-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* WaterDrinker */ = {
 			isa = PBXGroup;
 			children = (
+				8481B3B2241904A000694AE7 /* WaterDrinker.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -293,6 +295,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = AKJN32WHY8;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -630,8 +635,10 @@
 			baseConfigurationReference = F6B39265C6745916F300F7A8 /* Pods-WaterDrinker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WaterDrinker/WaterDrinker.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = AKJN32WHY8;
 				INFOPLIST_FILE = WaterDrinker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -650,7 +657,9 @@
 			baseConfigurationReference = FE996FC9551D56B8F6591AA3 /* Pods-WaterDrinker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WaterDrinker/WaterDrinker.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AKJN32WHY8;
 				INFOPLIST_FILE = WaterDrinker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

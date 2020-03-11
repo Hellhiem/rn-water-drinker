@@ -17,7 +17,6 @@ const Container = styled.View`
 `;
 
 const ProgressBar = styled.View`
-  width: ${({ width }) => width}%;
   border-radius: 20px;
   background-color: ${({ theme }: ThemeType) => theme.colors.mainAccent};
 `;
@@ -40,7 +39,7 @@ const AnimatedProgressBar = memo(({ value }: PropsType) => {
 
   return (
     <Container>
-      <ProgressBar as={Animated.View} width={width} />
+      <ProgressBar as={Animated.View} style={{ width }} />
     </Container>
   );
 });

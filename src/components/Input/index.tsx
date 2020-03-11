@@ -25,7 +25,7 @@ const InputTextField = styled.TextInput`
   border-radius: 10px;
   height: 30px;
   margin-top: 10px;
-  padding-left: 3px;
+  padding: 4px;
 `;
 
 const Input = ({ value, labelText, onChange, password, keyboardType }: PropType) => {
