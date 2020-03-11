@@ -12,12 +12,12 @@ const RootNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name={NavigationRoutes.Login} component={LoginContainer} options={{ headerShown: false }} />
         <Stack.Screen
           name={NavigationRoutes.WaterStatistics}
           component={WaterStatistics}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name={NavigationRoutes.Login} component={LoginContainer} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
