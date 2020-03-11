@@ -4,6 +4,7 @@
   "plugins": ["@typescript-eslint", "fp"],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
+    "promise/always-return": "off",
     "prettier/prettier": ["error",{ "printWidth": 120 }],
     "promise/catch-or-return": "off",
     "react/style-prop-object": "error",

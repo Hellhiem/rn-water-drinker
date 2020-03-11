@@ -31,7 +31,12 @@ const Input = ({ labelText, onChange, password, keyboardType }: PropType) => {
   return (
     <InputContainer>
       <InputLabel>{labelText}</InputLabel>
-      <InputTextField onChangeText={text => onChange(text)} secureTextEntry={password} keyboardType={keyboardType} />
+      <InputTextField
+        onChangeText={text => onChange(text)}
+        secureTextEntry={password}
+        keyboardType={keyboardType}
+        autoCapitalize="none"
+      />
     </InputContainer>
   );
 };

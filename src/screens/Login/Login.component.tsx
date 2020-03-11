@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components/native";
 import { ThemeType } from "types/ThemeType";
 import { useTranslation } from "react-i18next";
@@ -6,7 +6,9 @@ import { waterDrop } from "assets/images";
 import { Input } from "components";
 
 type PropType = {
-  signIn: (email: string, password: string) => void;
+  signIn: () => void;
+  onPasswordChange: (text: string) => void;
+  onEmailChange: (text: string) => void;
 };
 
 const Container = styled.View`
@@ -45,10 +47,8 @@ const SignInButton = styled.TouchableOpacity`
 
 const SignInText = styled.Text``;
 
-const LoginComponent = ({ signIn }: PropType) => {
+const LoginComponent = ({ signIn, onPasswordChange, onEmailChange }: PropType) => {
   const { t } = useTranslation();
-  const [emailText, onEmailChange] = useState("");
-  const [passwordText, onPasswordChange] = useState("");
 
   return (
     <Container>
@@ -58,7 +58,7 @@ const LoginComponent = ({ signIn }: PropType) => {
       </HeaderContainer>
       <Input labelText={t("Login.email")} onChange={onEmailChange} keyboardType="email-address" />
       <Input labelText={t("Login.password")} onChange={onPasswordChange} password />
-      <SignInButton onPress={() => signIn(emailText, passwordText)}>
+      <SignInButton onPress={signIn}>
         <SignInText>Sign in</SignInText>
       </SignInButton>
     </Container>
